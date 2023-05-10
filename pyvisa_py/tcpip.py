@@ -799,6 +799,7 @@ class TCPIPInstrVxi11(Session):
         else:
             self.timeout = value / 1000.0
             self._io_timeout = int(self.timeout * 1000)
+        self.lock_timeout = self._io_timeout
         return StatusCode.success
 
 
